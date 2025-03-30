@@ -30,12 +30,34 @@ def main():
                 
                 converted_num = ("".join(map(str,remainder_list)))
                 
-                return converted_num
-    
-    
-    
+                if type(self.num) == float:
+                    int_num = int(self.num)
+                    dec_num = self.num - int_num
+                    dec_num_list = []
+                    
+                    lenght = len(str(dec_num))
+                    lenght -= 2
+                    
+                    
+                    for i in range(0,lenght):
+                        int_dec_num = int(dec_num)
+                        dec_num = dec_num - int_dec_num
+                        
+                        dec_num = dec_num * new_base
+                        
+                        dec_num_list.append(int(dec_num))
+                    
+                    dec_converted = ("".join(map(str,dec_num_list)))
+                    
+                    if converted_num == str: 
+                        converted_num = converted_num + "."+ dec_converted
+                    else: converted_num = "0."+ dec_converted
+                    return converted_num
+                else: return converted_num
 
-
+                
+            else: 
+                pass
 
 
 
