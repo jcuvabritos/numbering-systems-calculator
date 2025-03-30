@@ -8,6 +8,7 @@ def main():
         
         def base_change(self,new_base): 
             
+            #decimal to another base
             if self.base == 10:
                 quotient = int(self.num)
                 remainder_list = []
@@ -55,9 +56,34 @@ def main():
                     return converted_num
                 else: return converted_num
 
+            #other systems to decimal
+            if new_base == 10: 
+                converted_num = float()
+                number = str(self.num)
                 
-            else: 
-                pass
+                
+                if '.' in number:
+                    point_index = number.index('.')
+                    int_part = number[0:point_index]
+                    dec_part = number[point_index+1:len(number)]
+                    number = int_part + dec_part
+                    exponent = len(int_part)-1
+                else: 
+                    exponent = len(number)-1
+                
+                
+                for i in number:
+                    if i == 'A': i = 10
+                    elif i == 'B': i == 11
+                    elif 1 == 'C': i == 12
+                    elif 1 == 'D': i == 13
+                    elif 1 == 'E': i == 14
+                    elif 1 == 'F': i == 15
+                    converted_num += int(i) * (self.base ** exponent)
+                    
+                    exponent -= 1
+                
+                return converted_num
 
 
 
