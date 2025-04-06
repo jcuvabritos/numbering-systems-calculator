@@ -12,7 +12,10 @@ def main():
             if self.base == 10:
                 quotient = int(self.num)
                 remainder_list = []
-                
+            
+            if quotient == 0:
+                converted_num = "0"
+            else:
                 while quotient != 0:
                     remainder = quotient % new_base
                     if new_base == 16: 
@@ -31,14 +34,14 @@ def main():
                 
                 converted_num = ("".join(map(str,remainder_list)))
                 
-                if type(self.num) == float:
+                if self.num == int(self.num):
+                    return converted_num
+                else: 
                     int_num = int(self.num)
                     dec_num = self.num - int_num
                     dec_num_list = []
                     
-                    lenght = len(str(dec_num))
-                    lenght -= 2
-                    
+                    lenght = len(str(dec_num)) - 2
                     
                     for i in range(0,lenght):
                         int_dec_num = int(dec_num)
@@ -54,7 +57,6 @@ def main():
                         converted_num = converted_num + "."+ dec_converted
                     else: converted_num = "0."+ dec_converted
                     return converted_num
-                else: return converted_num
 
             #other systems to decimal
             if new_base == 10: 
