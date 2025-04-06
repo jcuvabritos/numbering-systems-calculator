@@ -84,7 +84,17 @@ def main():
                     exponent -= 1
                 
                 return converted_num
-
+    
+    def addition(base,*number):
+        result = 0
+        
+        for i in number:
+            result += float(i.base_change(10))
+        
+        
+        new_num = Number(result,10)
+        print(new_num.num)
+        return new_num.base_change(base)
 
 
 if __name__ == '__main__':
