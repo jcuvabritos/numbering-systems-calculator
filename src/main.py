@@ -77,10 +77,10 @@ def main():
                 for i in number:
                     if i == 'A': i = 10
                     elif i == 'B': i == 11
-                    elif 1 == 'C': i == 12
-                    elif 1 == 'D': i == 13
-                    elif 1 == 'E': i == 14
-                    elif 1 == 'F': i == 15
+                    elif i == 'C': i == 12
+                    elif i == 'D': i == 13
+                    elif i == 'E': i == 14
+                    elif i == 'F': i == 15
                     converted_num += int(i) * (self.base ** exponent)
                     
                     exponent -= 1
