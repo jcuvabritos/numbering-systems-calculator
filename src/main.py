@@ -98,20 +98,14 @@ def main():
         return new_num.base_change(base)
 
     def subtraction(base,*number):
-        result = 0
+        result = float(number[0].base_change(10))
         
-        for i in number:
+        for i in number[1:]:
             result -= float(i.base_change(10))
         
         
         new_num = Number(result,10)
         return new_num.base_change(base)
-    
-    n1 = Number(11,2)
-    n2 = Number(10,2)
-    
-    print(subtraction(2,n1,n2))
-
 
 if __name__ == '__main__':
     main()
