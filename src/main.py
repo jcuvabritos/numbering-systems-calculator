@@ -113,6 +113,12 @@ def multiplication(base,*number):
     new_num = Number(result,10)
     return new_num.base_change(base)
 
+def division(base,number1, number2):
+    result = float(number1.base_change(10))/float(number2.base_change(10))
+    
+    new_num = Number(result,10)
+    return new_num.base_change(base)
+
 def main(): 
     pass
 
