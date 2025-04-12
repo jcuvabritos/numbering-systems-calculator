@@ -103,6 +103,16 @@ def subtraction(base,*number):
     new_num = Number(result,10)
     return new_num.base_change(base)
 
+def multiplication(base,*number):
+    result = float(number[0].base_change(10))
+    
+    for i in number[1:]:
+        result *= float(i.base_change(10))
+    
+    
+    new_num = Number(result,10)
+    return new_num.base_change(base)
+
 def main(): 
     pass
 
