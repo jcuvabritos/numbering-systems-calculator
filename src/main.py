@@ -4,6 +4,8 @@ class Number:
         self.base = base
         
     def base_change(self,new_base): 
+        assert type(new_base) == int, "Base must be an integer"
+        assert new_base > 1, "Base must be greater than 1"
         
         #decimal to another base
         if self.base == 10:
@@ -84,6 +86,10 @@ class Number:
             return converted_num
 
 def addition(base,*number):
+    assert len(number) > 0, "At least one number is required"
+    assert type(base) == int, "Base must be an integer"
+    assert base > 1, "Base must be greater than 1"
+
     result = 0
     
     for i in number:
@@ -94,6 +100,10 @@ def addition(base,*number):
     return new_num.base_change(base)
 
 def subtraction(base,*number):
+    assert len(number) > 1, "At least two numbers are required"
+    assert type(base) == int, "Base must be an integer"
+    assert base > 1, "Base must be greater than 1"
+
     result = float(number[0].base_change(10))
     
     for i in number[1:]:
@@ -104,6 +114,10 @@ def subtraction(base,*number):
     return new_num.base_change(base)
 
 def multiplication(base,*number):
+    assert len(number) > 1, "At least two numbers are required"
+    assert type(base) == int, "Base must be an integer"
+    assert base > 1, "Base must be greater than 1"
+
     result = float(number[0].base_change(10))
     
     for i in number[1:]:
@@ -114,6 +128,10 @@ def multiplication(base,*number):
     return new_num.base_change(base)
 
 def division(base,number1, number2):
+    assert len(number) > 1, "At least two numbers are required"
+    assert type(base) == int, "Base must be an integer"
+    assert base > 1, "Base must be greater than 1"
+
     result = float(number1.base_change(10))/float(number2.base_change(10))
     
     new_num = Number(result,10)
