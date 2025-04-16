@@ -131,6 +131,7 @@ def division(base,*number):
     assert len(number) > 1, "At least two numbers are required"
     assert type(base) == int, "Base must be an integer"
     assert base > 1, "Base must be greater than 1"
+    assert number[1:] != 0, "You can divide by Zero" 
 
     result = float(number[0].base_change(10))
     
