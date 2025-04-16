@@ -120,21 +120,8 @@ def division(base,number1, number2):
     return new_num.base_change(base)
 
 def main(): 
-    while True:
-        menu = input("\nSelect an option:\n 1) Change the base of a number\n 2) Operations\n 3) Exit\n")
-        
-        if menu == "1":
-            user_number = input("Write the number: ")
-            user_base = input("Write the current base of the number: ")
-            user_new_base = input("Write the new base for the number: ")
-            
-            number = Number(int(user_number),int(user_base))
-            print(f"The number {user_number} in base {user_base}, now is {number.base_change(int(user_new_base))} in base {user_new_base} ")
-        elif menu == "2":
-            pass
-        elif menu == "3":
-            break
-        else: print("Not a valid option")
+    #Here you can execute the calculator
+    pass
 
 if __name__ == '__main__':
     main()
