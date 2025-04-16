@@ -56,6 +56,7 @@ class Number:
                         converted_num = converted_num + "."+ dec_converted
                     else: converted_num = "0."+ dec_converted
                     return converted_num
+        
         #other systems to decimal
         if new_base == 10: 
             converted_num = float()
@@ -85,6 +86,7 @@ class Number:
             
             return converted_num
 
+#function that allows you to add numbers in different bases
 def addition(base,*number):
     assert len(number) > 0, "At least one number is required"
     assert type(base) == int, "Base must be an integer"
@@ -99,6 +101,7 @@ def addition(base,*number):
     new_num = Number(result,10)
     return new_num.base_change(base)
 
+#function that allows you to subtract numbers in different bases
 def subtraction(base,*number):
     assert len(number) > 1, "At least two numbers are required"
     assert type(base) == int, "Base must be an integer"
@@ -113,6 +116,7 @@ def subtraction(base,*number):
     new_num = Number(result,10)
     return new_num.base_change(base)
 
+#function that allows you to multiply numbers in different bases
 def multiplication(base,*number):
     assert len(number) > 1, "At least two numbers are required"
     assert type(base) == int, "Base must be an integer"
@@ -127,6 +131,7 @@ def multiplication(base,*number):
     new_num = Number(result,10)
     return new_num.base_change(base)
 
+#function that allows you to divide numbers in different bases
 def division(base,*number):
     assert len(number) > 1, "At least two numbers are required"
     assert type(base) == int, "Base must be an integer"
