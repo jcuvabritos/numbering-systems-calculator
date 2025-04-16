@@ -13,7 +13,7 @@ class Number:
             remainder_list = []
         
             if quotient == 0:
-                converted_num = "0"
+                return "0"
             else:
                 while quotient != 0:
                     remainder = quotient % new_base
